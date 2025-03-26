@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import animeCard from "../components/EntranceCards";
 import TopAnime from "../assets/images/dashboardImages/top-anime.svg";
-import TopWatches from "../assets/images/dashboardImages/top-watches.svg"
+import TopWatches from "../assets/images/dashboardImages/top-watches.svg";
 
 const Dashboard = () => {
   return (
@@ -11,7 +11,7 @@ const Dashboard = () => {
         className="d-flex flex-wrap"
         style={{ gap: "15px", padding: "20px", justifyContent: "space-around" }}
       >
-        <div >
+        <div>
           <h2>Top Anime</h2>
           {animeCard(
             TopAnime,

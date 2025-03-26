@@ -3,7 +3,6 @@ import AuthForm from "./pages/AuthForm";
 import Entrance from "./pages/Entrance";
 import Dashboard from "./pages/Dashboard";
 
-
 function App() {
   return (
     <>

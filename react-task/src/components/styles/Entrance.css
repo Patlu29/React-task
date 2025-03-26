@@ -1,6 +1,6 @@
 .btn {
-    margin: 0 50px 0 50px;
+  margin: 0 50px 0 50px;
 }
 .btn:hover {
-    scale: .9;
+  scale: 0.9;
 }

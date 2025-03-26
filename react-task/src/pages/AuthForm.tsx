@@ -31,7 +31,10 @@ const AuthForm = () => {
           <h2 className={isLogin ? "login-heading" : "registration-heading"}>
             {isLogin ? "Login" : "Register"}
           </h2>
-          <form className={isLogin ? "login-form" : "register-form"} onSubmit={isLogin ? navigateDashboard : navigateDashboard}>
+          <form
+            className={isLogin ? "login-form" : "register-form"}
+            onSubmit={isLogin ? navigateDashboard : navigateDashboard}
+          >
             {!isLogin && (
               <input
                 type="text"
@@ -63,7 +66,7 @@ const AuthForm = () => {
             <button
               type="submit"
               className={isLogin ? "login-submit" : "register-submit"}
-            //   onClick={""}
+              //   onClick={""}
             >
               {isLogin ? "Login" : "Register"}
             </button>

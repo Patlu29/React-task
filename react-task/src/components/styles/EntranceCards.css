@@ -1,5 +1,5 @@
 .entrance-card:hover {
-    scale: 1.1;
-    transition: 0.5s;
-    border: none !important; 
+  scale: 1.1;
+  transition: 0.5s;
+  border: none !important;
 }
