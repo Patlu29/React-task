@@ -1,0 +1,42 @@
+.container-1 {
+    /* background-image: url(/home/PrakashRajan/Documents/React-task/react-task/src/assets/images/login-bg.webp);
+    background-size: contain; */
+    justify-items: center;
+    border: 1px solid transparent;
+    margin: 0;
+    max-width: 100%;
+}
+.login-container {
+    padding: 5rem;
+    margin: 9rem 0 7rem 0;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 25px #666666;
+}
+.login-img {
+    width: 150px;
+}
+.login-form, .login-division {
+    display: flex;
+    flex-direction: column;
+}
+.login-input {
+    width: 20vw;
+    margin: 10px;
+    border: 1px solid rgb(126, 126, 126);
+    background-color: transparent;
+    border-radius: 5px;
+}
+.login-submit {
+    width: 150px;
+    margin: 0 0 0 10px;
+    border: 1px solid rgb(126, 126, 126);
+    background-color: rgb(179, 179, 127);
+    border-radius: 5px;
+    border: none;
+}
+.login-submit:hover {
+    background-color: rgb(79, 99, 99);
+    scale: 0.9;
+    transition: 0.5s;
+}
