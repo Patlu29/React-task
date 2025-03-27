@@ -1,6 +1,10 @@
 import "../components/styles/EntranceCards.css";
 
-export default function animeCard(img: any, content: string) {
+export default function animeCard(
+  img: string,
+  content: string,
+  footer?: string
+) {
   return (
     <div
       className="entrance-card"
@@ -18,7 +22,10 @@ export default function animeCard(img: any, content: string) {
         style={{ height: "200px" }}
       />
       <div className="card-body">
-        <p className="card-text">{content}</p>
+        <p className="card-text">
+          {content} <br></br>
+          {footer}
+        </p>
       </div>
     </div>
   );
