@@ -12,7 +12,7 @@ function App() {
           <Route path="/" element={<Entrance />} />
           <Route path="/form" element={<AuthForm />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/topanime" element={<AniTable />} />
+          <Route path="/topanime" element={<AniTable.AniTable />} />
         </Routes>
       </Router>
     </>

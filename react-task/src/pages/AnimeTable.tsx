@@ -1,9 +1,3 @@
-import TableContainer from "@material-ui/core/TableContainer";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableRow from "@material-ui/core/TableRow";
-import TableHead from "@material-ui/core/TableHead";
-import TableCell from "@material-ui/core/TableCell";
 import "../components/styles/AnimeTable.css";
 import { useLocation } from "react-router-dom";
 
@@ -44,64 +38,63 @@ const TopWatchedAnime = [
   AnimeWatchTableData("Naruto", "900M+ Views"),
   AnimeWatchTableData("Attack on Titan", "850M+ Views"),
   AnimeWatchTableData("Death Note", "800M+ Views"),
+  AnimeWatchTableData("Dragon Ball Z", "750M+ Views"),
+  AnimeWatchTableData("Demon Slayer", "700M+ Views"),
+  AnimeWatchTableData("Jujutsu Kaisen", "650M+ Views"),
+  AnimeWatchTableData("My Hero Academia", "600M+ Views"),
+  // AnimeWatchTableData("Sword Art Online", "550M+ Views"),
+  // AnimeWatchTableData("Tokyo Revengers", "500M+ Views"),
 ];
 
 const AniTable = () => {
   const location = useLocation();
-  // const [isTopAnime, setIsTopAnime] = useState(true);
+
   const isTopAnime = location.state?.isTopAnime ?? true;
 
+
   return (
-    <div style={{ display: "block", padding: 30, justifyItems: "center" }}>
+    <div
+      style={{ display: "block", padding: 30, justifyItems: "center" }}
+      className="table-page-container"
+    >
       <h4>
         {isTopAnime
           ? "Top Anime list of all time"
           : "Top Watched Anime of all time"}
       </h4>
-      <div>
-        <TableContainer className="table-container">
-          <Table
-            style={{
-              width: 600,
-              margin: "10px",
-            }}
-            size="medium"
-            className="table-body"
-          >
-            <TableHead className="table-head">
-              <TableRow className="table-head-row">
-                <TableCell>Anime Name</TableCell>
-                <TableCell align="right">
-                  {isTopAnime ? "Release year" : "Total views"}
-                </TableCell>
-                {isTopAnime && <TableCell align="right">Rating ?/10</TableCell>}
-              </TableRow>
-            </TableHead>
-            <TableBody className="table-body">
-              {isTopAnime
-                ? TopAnimeData.map((row) => (
-                    <TableRow key={row.AnimeName}>
-                      <TableCell component="th" scope="row">
-                        {row.AnimeName}
-                      </TableCell>
-                      <TableCell align="right">{row.ReleaseYear}</TableCell>
-                      <TableCell align="right">{row.Rating}</TableCell>
-                    </TableRow>
-                  ))
-                : TopWatchedAnime.map((row) => (
-                    <TableRow key={row.AnimeName}>
-                      <TableCell component="th" scope="row">
-                        {row.AnimeName}
-                      </TableCell>
-                      <TableCell align="right">{row.TotalViews}</TableCell>
-                    </TableRow>
-                  ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+      <div className="table-container">
+        <table className="table-body">
+          <tr className="table-head-row">
+            <th className="table-head" style={{ borderRadius: "20px" }}>
+              Anime Name
+            </th>
+            <th align="left" className="table-head">
+              {isTopAnime ? "Release year" : "Total views"}
+            </th>
+            {isTopAnime && (
+              <th align="left" className="table-head">
+                Rating ?/10
+              </th>
+            )}
+          </tr>
+          {isTopAnime
+            ? TopAnimeData.map((row) => (
+                <tr key={row.AnimeName} className="table-body-row">
+                  <td scope="row">{row.AnimeName}</td>
+                  <td align="left">{row.ReleaseYear}</td>
+                  <td align="left">{row.Rating}</td>
+                </tr>
+              ))
+            : TopWatchedAnime.map((row) => (
+                <tr key={row.AnimeName} className="table-body-row">
+                  <td scope="row">{row.AnimeName}</td>
+                  <td align="left">{row.TotalViews}</td>
+                </tr>
+              ))}
+        </table>
       </div>
     </div>
   );
 };
 
-export default AniTable;
+export default { AniTable, TopAnimeData, TopWatchedAnime };

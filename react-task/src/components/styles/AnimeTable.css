@@ -1,12 +1,27 @@
+.table-page-container {
+  background-image: url("/home/PrakashRajan/Documents/React-task/react-task/src/assets/images/formComponentImages/image.png");
+  background-position: center;
+  background-size: cover;
+  background-size: 500px;
+}
 .table-container {
   border: 1px solid transparent;
   border-radius: 10px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
   box-shadow: 0 0 25px #666666;
 }
-.table-head {
-  background-color: rgb(199, 226, 226);
-}
 .table-body {
-  background-color: rgb(181, 204, 204);
+  width: 600px;
+  height: auto;
+  margin: 10px;
+}
+th {
+  padding: 10px;
+  font-size: larger;
+}
+td {
+  padding: 10px;
+  border-top: 1px solid #666666;
+  font-weight: 700;
+  color: #2e1e1e;
 }

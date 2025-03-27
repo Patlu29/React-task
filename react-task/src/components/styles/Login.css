@@ -1,6 +1,6 @@
 .container-1 {
-  /* background-image: url(/home/PrakashRajan/Documents/React-task/react-task/src/assets/images/formComponentImages/login-bg.webp);
-    background-size: contain; */
+  /* background-image: url('/home/PrakashRajan/Documents/React-task/react-task/src/assets/images/formComponentImages/login-bg.webp');
+  background-size: contain; */
   justify-items: center;
   border: 1px solid transparent;
   margin: 0;
