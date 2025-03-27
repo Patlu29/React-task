@@ -9,7 +9,7 @@ import deathNote from "../assets/images/entranceImages/death-note.svg";
 import ippo from "../assets/images/entranceImages/hajime-no-ippo.svg";
 import yourName from "../assets/images/entranceImages/your-name.svg";
 import iWantTo from "../assets/images/entranceImages/i-want-to-eat.svg";
-import onePeice from "../assets/images/entranceImages/one-peice.svg";
+import onePiece from "../assets/images/entranceImages/one-piece.svg";
 import Navbar from "../components/Navbar";
 
 const Entrance = () => {
@@ -26,7 +26,7 @@ const Entrance = () => {
           "'Naruto' is a Japanese anime series based on Masashi Kishimoto's manga, following the story of Naruto Uzumaki, a young ninja who dreams of becoming the Hokage, the leader of his village, Konoha. "
         )}
         {animeCard(
-          onePeice,
+          onePiece,
           "'One Piece' series based on Eiichiro Oda's manga of the same name, following the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, as they journey to find the legendary treasure, 'One Piece', and become the next King of the Pirates."
         )}
         {animeCard(
