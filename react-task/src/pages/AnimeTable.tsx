@@ -4,7 +4,7 @@ import TableBody from "@material-ui/core/TableBody";
 import TableRow from "@material-ui/core/TableRow";
 import TableHead from "@material-ui/core/TableHead";
 import TableCell from "@material-ui/core/TableCell";
-import { useState } from "react";
+import "../components/styles/AnimeTable.css";
 import { useLocation } from "react-router-dom";
 
 function AnimeTableData(
@@ -27,13 +27,13 @@ function AnimeWatchTableData(AnimeName: string, TotalViews: number | string) {
 }
 
 const TopAnimeData = [
-  AnimeTableData("One Peice", "Ongoing", 9),
+  AnimeTableData("One Piece", "Ongoing", 9),
   AnimeTableData("Naruto", 2017, 8),
   AnimeTableData("Solo levelling", "Ongoing", 8),
   AnimeTableData("Demon Slayer", "Ongoing", 8.5),
   AnimeTableData("Attack On Titan", 2023, 9.5),
   AnimeTableData("Death note", 2010, 8.3),
-  AnimeTableData("jujutsu kaisen", "Ongoing", 8.7),
+  AnimeTableData("Jujutsu kaisen", "Ongoing", 8.7),
   AnimeTableData("One Punch Man", "Ongoing", 8.5),
   AnimeTableData("Tokyo Revengers", 2023, 7.6),
   AnimeTableData("Classroom of Elite", "Ongoing", 8.8),
@@ -59,15 +59,17 @@ const AniTable = () => {
           : "Top Watched Anime of all time"}
       </h4>
       <div>
-        <TableContainer>
+        <TableContainer className="table-container">
           <Table
             style={{
               width: 600,
+              margin: "10px",
             }}
             size="medium"
+            className="table-body"
           >
-            <TableHead>
-              <TableRow>
+            <TableHead className="table-head">
+              <TableRow className="table-head-row">
                 <TableCell>Anime Name</TableCell>
                 <TableCell align="right">
                   {isTopAnime ? "Release year" : "Total views"}
@@ -75,7 +77,7 @@ const AniTable = () => {
                 {isTopAnime && <TableCell align="right">Rating ?/10</TableCell>}
               </TableRow>
             </TableHead>
-            <TableBody>
+            <TableBody className="table-body">
               {isTopAnime
                 ? TopAnimeData.map((row) => (
                     <TableRow key={row.AnimeName}>
@@ -101,7 +103,5 @@ const AniTable = () => {
     </div>
   );
 };
-
-// const TableComponents = [AniTable, TopAnimeData, TopWatchedAnime]
 
 export default AniTable;
