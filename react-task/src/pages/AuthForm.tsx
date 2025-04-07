@@ -9,8 +9,7 @@ const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true);
   const navigate = useNavigate();
 
-  const navigateDashboard = (e: any) => {
-    e.preventDefault();
+  const navigateDashboard = () => {
     navigate("/dashboard");
   };
 
